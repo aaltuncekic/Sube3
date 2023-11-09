@@ -51,3 +51,55 @@ body{
     height: 100%;
     height: 100vh;
 }
+
+
+.border{
+    margin:25px;
+    width: 50%;
+    height: 180px;
+    
+
+    border-top:2px solid black;
+    border-right:2px dotted red;
+    border-bottom: 5px dashed blue;
+    border-left: 2px solid brown;
+
+    border: 3px solid brown;
+
+    border-radius: 10%;
+
+    border-top-right-radius: 80%;
+
+}
+
+.background{
+    /* background-color: blueviolet;
+    background-image: url('../images/gazi.png');
+    background-position: top left;
+    background-position: bottom right;
+    background-position: center;
+
+    background-size: 25%;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+
+    background-size: 100% 100%;
+    background-size: cover; */
+
+    background: top/cover  url('../images/gazi.png') red ;
+}
+
+.font{
+    font-size: 64px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    
+    text-align: left;
+    text-decoration: underline dotted;
+    text-decoration-color: bisque;
+
+    text-transform: capitalize;
+
+    text-shadow: 10px 5px red;
+}
