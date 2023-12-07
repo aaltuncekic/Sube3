@@ -1,0 +1,109 @@
+<html>
+    <head><title>Formlar</title></head>
+    <body>
+
+        <form method="post" action="https://api.domain/controller/action">
+            <div>
+                <input
+                name="kullaniciadi"
+                type="text"
+                placeholder="Kullanıcı adı"
+                required
+            />
+            </div>
+            <div>
+                <input
+                name="sifre"
+                type="password"
+                placeholder="Şifre"
+                required
+                minlength="6"
+                maxlength="10"
+            />
+
+            </div>
+            <div>
+                <input
+                type="email"
+                name="eposta"
+                />
+            </div>
+            <div>
+                <input
+                type="number"
+                min="10"
+                max="50"
+                step="5"
+            />
+            <div>
+                Beni Hatırla?
+                <input type="checkbox"  name="onay" checked />
+            </div>
+            <div>
+                Cinsiyet<br />
+                Erkek<input type="radio" name="cinsiyet" checked />
+                Kadın<input type="radio" name="cinsiyet" />
+            </div>
+
+            <div>
+                <input type="date" />
+                <input type="datetime-local" />
+            </div>
+
+            <div>
+                <input type="color" />
+            </div>
+            <div>
+                <input type="file" />
+            </div>
+            <div>
+                <input type="tel"
+                pattern="([0-9]{3}) [0-9]{3}-[0-9]{4}" />
+            </div>
+            
+            <div>
+                <textarea 
+                rows="10"
+                cols="50"
+                 name="aciklama"></textarea>
+            </div>
+
+
+            <select name="sinif" required>
+                <option value="">Seçiniz</option>
+                <option value="1">1. Sınıf</option>
+                <option value="2">2. Sınıf</option>
+                <option value="3">3. Sınıf</option>
+                <option value="4">4. Sınıf</option>
+            </select>
+
+            <input name="ad"
+            value="Alper ALTUNÇEKİÇ" 
+            readonly
+            
+            />
+            <input name="ad"
+            value="Alper ALTUNÇEKİÇ" 
+            disabled
+            
+            />
+
+
+            
+            <div>
+                <input
+                type="submit"
+            />
+
+            <input
+            type="reset"
+        />
+            </div>
+
+
+
+        </form>
+
+
+    </body>
+</html>
