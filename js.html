@@ -1,0 +1,108 @@
+<html>
+    <head><title>Temel JS</title></head>
+    <body>
+
+        <form>
+            <div>
+                <input type="text" id="kAdi" />
+                <span id="kAdiError"></span>
+            </div>
+            <div>
+                <input type="password" id="password" />
+                <span id="passError"></span>
+            </div>
+
+            <a onclick="dogrula()" >Giriş Yap</a>
+        </form>
+
+        <script>
+            function dogrula(){
+                var kadi = document.getElementById("kAdi").value
+                var password = document.getElementById("password").value
+                document.getElementById("kAdiError").innerHTML=""
+                document.getElementById("passError").innerHTML=""
+                if(!kadi && !password){
+                    // alert("Kullanıcı adı ve şifre giriniz")
+                    document.getElementById("kAdiError").innerHTML="Kullanıcı adı ve şifre giriniz"
+                }
+                else if(!kadi){
+                    // alert("Kullanıcı adı giriniz")
+                    document.getElementById("kAdiError").innerHTML="Kullanıcı adı giriniz"
+                }
+                else if(!password){
+                    // alert("Şifre giriniz")
+                    document.getElementById("passError").innerHTML="Şifre giriniz"
+                }
+                else{
+                    alert("Kullanıcı adı ve şifre girilmiştir")
+                    document.getElementById("passError").innerHTML=""
+                    document.getElementById("kAdiError").innerHTML=""   
+                }
+
+
+            }
+        </script>
+        <script>
+        // alert("Merhaba")
+//DEĞİŞKENLER
+
+            var degisken;
+            degisken ="Merhaba"
+            degisken =5 
+            degisken = new Date().toLocaleDateString()
+
+            //  alert(degisken)
+
+
+        </script>
+
+        <script>
+            //FONKSİYON
+            function fonksiyon()
+            {
+                alert("Selam")
+            }
+            // fonksiyon()
+
+            function fonksiyon1(deger=""){
+                alert(deger)
+            }
+
+            // fonksiyon1()
+        </script>
+
+        <script>
+            //KOŞUL İFADELERİ
+            function sart(deger){
+                if(deger<0){
+                    alert("Sayı negatif")
+                }
+                else{
+                    alert("Sayı negatif değil")
+                }
+            }
+
+            // sart(5)
+
+            function sart1(deger){
+                if(deger==0){
+                    alert("Sayı sıfır")
+                }
+                else if(deger<0){
+                    alert("Negatif")
+                }
+                else if(deger>0){
+                    alert("pozitif")
+                }
+                else{
+                    alert("Geçersiz sayı")
+                }
+            }
+
+            // sart1("Beş")
+
+
+        </script>
+
+    </body>
+</html>
