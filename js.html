@@ -4,15 +4,22 @@
 
         <form>
             <div>
-                <input type="text" id="kAdi" />
-                <span id="kAdiError"></span>
+                <input 
+                name="kullaniciadi" 
+                id="username"
+                placeholder="Kullanıcı Adı"/>
+                <span id="userError"></span>
             </div>
             <div>
-                <input type="password" id="password" />
+                <input name="sifre"
+                id="password" type="password" 
+                placeholder="Şifre"/>
                 <span id="passError"></span>
             </div>
-
-            <a onclick="dogrula()" >Giriş Yap</a>
+            <div>
+               <a onclick="dogrula()" >Giriş Yap</a>
+            </div>
+            
         </form>
 
         <div>
@@ -33,101 +40,133 @@
         </div>
         <script>
             function hesapla(){
+                // var val1 = Number(document.getElementById("val1").value)
+                // var val2 = Number(document.getElementById("val2").value)
+
+                var val1 = document.getElementById("val1").value
+                var val2 = document.getElementById("val2").value
+                var islem = document.getElementById("islem").value
+
+                    var sonuc =0;
+                    if(islem==1){//Çarpma
+                        sonuc = val1*val2;
+                    }
+                    else if(islem==2){//Bölme
+                        sonuc = val1/val2
+                    }
+                    else if(islem==3){//TOPLAMA
+                        sonuc = Number(val1)+Number(val2)
+                    }
+                    else if(islem==4){//ÇIKARTMA
+                        sonuc=val1-val2
+                    }
+                    else {
+                        alert("tanımsız istek")
+                    }   
+                    sonucYazdir(sonuc)
+    }
+
+            function sonucYazdir(deger){
+                var sonucYazdir = document.getElementById("sonuc1").innerHTML="<b>Sonuç: "+deger+"</b>"
+            }
+        </script>
+        <script>
+            function dogrula(){
+                var username = document.getElementById("username").value
+                var password = document.getElementById("password").value
+                
+                document.getElementById("userError").innerText=""
+                document.getElementById("passError").innerText=""
+                
+                if(!username && !password){
+                    document.getElementById("userError").innerText="Kullanıcı adı giriniz"
+                    // alert("Kullanıcı adı ve şifre giriniz")
+                }
+                else if(!username){
+                    document.getElementById("userError").innerText="Kullanıcı adı giriniz"
+
+                    // alert("Kullanıcı adı giriniz")
+                }
+                else if(!password){
+                    document.getElementById("passError").innerHTML="<b style='color:red'>Şifre giriniz</b>"
+
+                }
                 
             }
         </script>
 
-
-
-
         <script>
-            function dogrula(){
-                var kadi = document.getElementById("kAdi").value
-                var password = document.getElementById("password").value
-                document.getElementById("kAdiError").innerHTML=""
-                document.getElementById("passError").innerHTML=""
-                if(!kadi && !password){
-                    // alert("Kullanıcı adı ve şifre giriniz")
-                    document.getElementById("kAdiError").innerHTML="Kullanıcı adı ve şifre giriniz"
-                }
-                else if(!kadi){
-                    // alert("Kullanıcı adı giriniz")
-                    document.getElementById("kAdiError").innerHTML="Kullanıcı adı giriniz"
-                }
-                else if(!password){
-                    // alert("Şifre giriniz")
-                    document.getElementById("passError").innerHTML="Şifre giriniz"
-                }
-                else{
-                    alert("Kullanıcı adı ve şifre girilmiştir")
-                    document.getElementById("passError").innerHTML=""
-                    document.getElementById("kAdiError").innerHTML=""   
-                }
 
-
-            }
-        </script>
-        <script>
-        // alert("Merhaba")
-//DEĞİŞKENLER
-
+            //DEĞİŞKEN
             var degisken;
-            degisken ="Merhaba"
-            degisken =5 
+            degisken = "Merhaba"
+            degisken = 5 //string
+            degisken = "5" //int Number
             degisken = new Date().toLocaleDateString()
-
-            //  alert(degisken)
-
-
+            // degisken = true //boolean
+             //alert(degisken)
         </script>
 
         <script>
-            //FONKSİYON
+            //METHOD - FONKSİYON
+
             function fonksiyon()
             {
-                alert("Selam")
-            }
-            // fonksiyon()
-
-            function fonksiyon1(deger=""){
-                alert(deger)
+             alert("Method çalıştı")   
             }
 
-            // fonksiyon1()
+            //fonksiyon çalıştır
+            //fonksiyon()
+
+
+            function fonksiyon2(parametre="")
+            {
+                alert(parametre)
+            }
+            // fonksiyon2("AAA")
         </script>
 
         <script>
             //KOŞUL İFADELERİ
-            function sart(deger){
-                if(deger<0){
-                    alert("Sayı negatif")
+            function fonk3(deger){
+
+                if(deger){
+                   alert(deger)
                 }
                 else{
-                    alert("Sayı negatif değil")
+                    alert("Değer atanmadı")
                 }
             }
 
-            // sart(5)
+            // fonk3()
 
-            function sart1(deger){
-                if(deger==0){
-                    alert("Sayı sıfır")
-                }
-                else if(deger<0){
-                    alert("Negatif")
+
+            function fonk4(deger){
+                
+                if(deger>=5){
+                    alert("sayı 5 veya daha büyüktür")
                 }
                 else if(deger>0){
-                    alert("pozitif")
+                    alert("Sayı pozitif")
+                    console.log("1. şart")
                 }
+                else if(deger<0){
+                    alert("Sayı 2 negatif")
+                    console.log("2. şart")
+                }
+                else if(deger == 0){
+                    alert("Sayı 0 dır")
+                    console.log("3. şart")
+                }
+                
+                
                 else{
-                    alert("Geçersiz sayı")
+                    console.log("Hiçbir şart sağlanmadı")
                 }
             }
 
-            // sart1("Beş")
-
+            // fonk4(4)
 
         </script>
-
     </body>
 </html>
